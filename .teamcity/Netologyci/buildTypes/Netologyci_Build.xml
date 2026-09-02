@@ -19,6 +19,9 @@
         </parameters>
       </runner>
       <runner id="Maven2_1" name="" type="Maven2">
+        <conditions>
+          <does-not-contain name="teamcity.build.branch" value="master" />
+        </conditions>
         <parameters>
           <param name="goals" value="clean test" />
           <param name="localRepoScope" value="agent" />
